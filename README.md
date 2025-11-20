@@ -116,13 +116,13 @@ CREATE TABLE GOVERNANCE_AUTOPILOT_LOG (
 ai-governance-autopilot-snowflake/
 │
 ├── notebooks/
-│   └── governance_autopilot_demo.ipynb   # Main Snowflake Notebook
+│   └── ai_governance_autopilot_notebook.py  # Main Snowflake Notebook
 │
 ├── sql/
-│   ├── create_tags.sql                   # DATA_SENSITIVITY tag
-│   ├── create_policies.sql               # PII_ROW_POLICY
-│   ├── create_log_table.sql              # Audit log
-│   └── demo_data.sql                     # Demo table: CUSTOMERS_DEMO
+│   ├── 01_setup_tags_and_log.sql            # DATA_SENSITIVITY tag
+│   ├── 02_row_access_policy.sql.sql         # PII_ROW_POLICY
+│   ├── 03_alerts_and_tasks.sql              # Audit log
+│   
 │
 └── README.md
 ```
@@ -139,7 +139,7 @@ cd ai-governance-autopilot-snowflake
 ```
 
 ### 2️⃣ Open the Notebook in Snowflake
-Upload `notebooks/governance_autopilot_demo.ipynb` to your Snowflake Notebooks environment.
+Upload `ai_governance_autopilot_notebook.py` to your Snowflake Notebooks environment.
 * **Requirement:** Snowpark Python runtime.
 * **Requirement:** Cortex enabled in your region.
 
